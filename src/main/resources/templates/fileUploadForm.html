@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/formhandler}" method="post" th:object="${empleado}" enctype="multipart/form-data">
+		<p><input type="text" placeholder="Nombre" th:field="*{nombre}"></p>
+		<p><input type="file" name="file"></p>
+		<p><input type="submit"></p>
+	</form>
+	
+	<a th:href="@{/listar}"><button>Ver fotos</button></a>
+</body>
+</html>
